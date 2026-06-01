@@ -559,11 +559,28 @@
 
     .blog-card-images {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 2fr 1fr;
       gap: 2px;
-      height: 320px;
+      height: 380px;
       overflow: hidden;
       background: #111;
+      border-radius: 8px 8px 0 0;
+    }
+    .blog-card-images .blog-img-main {
+      height: 380px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .blog-card-images .blog-img-stack {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 2px;
+      height: 380px;
+    }
+    .blog-card-images .blog-img-stack img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
 
     .blog-card-images.single {

@@ -559,12 +559,28 @@
 
     .blog-card-images {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 2fr 1fr;
       gap: 2px;
-      height: 320px;
+      height: 380px;
       overflow: hidden;
       background: #111;
+      border-radius: 8px 8px 0 0;
+    }
+    .blog-card-images .blog-img-main {
+      height: 380px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .blog-card-images .blog-img-stack {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 2px;
+      height: 380px;
+    }
+    .blog-card-images .blog-img-stack img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
     }
 
     .blog-card-images.single {
@@ -934,10 +950,12 @@
       <!-- POST 1: Girl Scouts -->
       <div class="blog-card">
         <div class="blog-card-images">
-          <img src="Lab_picture1.jpg" alt="Drone water sampling presentation">
-          <img src="Lab_picture2.jpg" alt="Drone demo">
-          <img src="Lab_picture3.jpg" alt="Lab tour">
-          <img src="Lab_picture4.jpg" alt="Girl Scouts at SMART Lab">
+          <img class="blog-img-main" src="Lab_picture1.jpg" alt="Fatos presenting drone project to Girl Scouts">
+          <div class="blog-img-stack">
+            <img src="Lab_picture2.jpg" alt="Drone demo">
+            <img src="Lab_picture3.jpg" alt="Lab tour">
+            <img src="Lab_picture4.jpg" alt="Girl Scouts at SMART Lab">
+          </div>
         </div>
         <div class="blog-card-body">
           <div class="blog-meta">

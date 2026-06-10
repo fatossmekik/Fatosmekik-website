@@ -100,7 +100,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 8rem 4rem 4rem;
+      padding: 8rem 6rem 4rem;
       position: relative;
       background: #0d0d0d;
       overflow: hidden;
@@ -111,8 +111,7 @@
     .hero-text {
       position: relative;
       z-index: 1;
-      animation: fadeUp 1s ease forwards;
-      max-width: 700px;
+      max-width: 800px;
     }
 
     .hero-image {
@@ -541,17 +540,8 @@
     }
 
     .fade-in {
-      opacity: 1;
-      transform: translateY(0);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .js-loaded .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    .js-loaded .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
+      opacity: 1 !important;
+      transform: none !important;
     }
 
     /* BLOG */
@@ -1098,7 +1088,6 @@
   </footer>
 
   <script>
-    document.body.classList.add('js-loaded');
     function toggleMenu() {
       const nav = document.getElementById('nav-links');
       const btn = document.querySelector('.hamburger');
